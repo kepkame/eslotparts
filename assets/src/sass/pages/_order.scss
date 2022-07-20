@@ -1,0 +1,99 @@
+// Specific styles page Order WooCommerce
+
+.woocommerce-order {
+    
+    section {
+        margin-top: 45px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+
+.woocommerce-table--order-details {
+    background-color: $color-background;
+    border-collapse: collapse;
+    border: 1px solid $color-border-dark;
+
+    thead {
+        border-bottom: 3px solid $color-border-dark;
+
+        th,
+        td {
+            text-transform: uppercase;
+        }
+    }
+
+    th,
+    td {
+        border-top: 1px solid $color-border-dark;
+        padding: 8px 15px;
+
+        &:first-child {
+            text-align: left;
+        }
+
+        &:last-child {
+            text-align: right;
+            border-left: 1px solid $color-border-dark;
+        }
+    }
+
+    .woocommerce-table__line-item {
+
+        a {
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .product-quantity {
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+@media (min-width: 600px) {
+    .woocommerce-order {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        section {
+            margin-top: 0;
+        }
+
+        & > .woocommerce-order-thankyou {
+            flex-basis: 48%;
+            max-width: 48%;
+        }
+
+        & > .woocommerce-bacs-bank-details {
+            flex-basis: 48%;
+            max-width: 48%;
+            margin-left: auto;
+
+            h2 {
+                margin-top: 10px;
+            }
+        }
+
+        & > .woocommerce-order-details,
+        & > .woocommerce-customer-details,
+        .cart-features {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+}

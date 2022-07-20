@@ -1,0 +1,64 @@
+// Breadcrumb
+
+.breadcrumb,
+.woocommerce-breadcrumb {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+
+    a,
+    span {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: none;
+        color: $color-text;
+    }
+
+    a {
+        opacity: 0.7;
+
+        &:focus,
+        &:hover {
+            opacity: 1;
+            outline: none;
+        }
+    }
+
+    a:first-child {
+        display: inline-block;
+        position: relative;
+        padding-left: 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            transform: translateY(-50%);
+            background-image: url("../img/icon-house-white.svg");
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .breadcrumb-separator {
+        color: $color-text;
+        box-sizing: border-box;
+        margin: 0 4px;
+        opacity: 0.7;
+    }
+}
+
+
+
+
+@media (min-width: 850px) {
+    .breadcrumb .breadcrumb-separator,
+    .woocommerce-breadcrumb .breadcrumb-separator {
+        margin-right: 6px;
+        margin-left: 6px;
+    }
+}

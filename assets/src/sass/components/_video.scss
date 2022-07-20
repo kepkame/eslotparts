@@ -1,0 +1,109 @@
+// Block video
+
+.b-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-color: $color-background;
+}
+
+.b-video__media {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.b-video__link {
+    display: block;
+
+    &:focus {
+        outline: 1px dotted $color-text;
+    }
+}
+
+.b-video__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgba(30, 30, 30, 0.8);
+        border-radius: 50%;
+        box-sizing: border-box;
+        transform:  transform(-50%, -50%) scale(1);
+        animation: pulse infinite 2.3s;
+        opacity: 0;
+    }
+
+    &:focus,
+    &:hover {
+        outline: none;
+
+        .b-video__icon {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
+}
+
+.no-js .b-video__btn {
+    display: none;
+}
+
+
+.b-video:hover .b-video__btn,
+.b-video__btn:focus {
+    background-color: $color-primary;
+}
+
+
+
+.b-video:hover .b-video__btn:before,
+.b-video__btn:focus:before {
+    content: none;
+}
+
+.b-video__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+@media (min-width: 850px) {
+    .b-video__btn {
+        width: 80px;
+        height: 80px;
+    }
+
+    .b-video__icon {
+        width: 44px;
+        height: 44px;
+    }
+}

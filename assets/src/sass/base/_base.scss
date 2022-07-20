@@ -1,0 +1,288 @@
+// Other global styles (h1, ul, visually-hidden, etc.)
+
+html,
+body {
+    font-size: 16px;
+    font-family: $ff-base;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-text;
+    background-color: $color-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+div,
+p,
+li {
+    font-family: $ff-base;
+    color: $color-text;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.entry-title {
+    margin-top: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 24px 0 16px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 20px 0 16px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 16px 0;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 16px 0;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 16px 0;
+}
+
+a,
+div,
+p,
+li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: underline;
+    word-wrap: break-word;
+    color: $color-primary;
+
+    &:focus,
+    &:hover {
+        color: mix($color-primary, #000000, 85);
+        outline: none;
+    }
+}
+
+p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+ul,
+ol {
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+.container {
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.entry-content {
+
+}
+
+.entry-header--center {
+    text-align: center;
+}
+
+mark {
+    display: inline-block;
+    color: $color-background;
+    background-color: $color-primary;
+    padding: 0 3px;
+}
+
+.marker {
+    color: $color-primary;
+}
+
+.site-content {
+    background-color: #131313; // #212121
+    background-image: url("../img/bg-listing.png");
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.site-main {
+
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    bottom: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+// placeholder
+::-webkit-input-placeholder {color:#888888;}
+::-moz-placeholder {color:#888888;}/* Firefox 19+ */
+:-moz-placeholder {color:#888888;}/* Firefox 18- */
+:-ms-input-placeholder {color:#888888;}
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: 0 0;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #4d4d4d;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #4d4d4d;
+    border-radius: 5px;
+}
+
+// selection
+h1, h2, h3, h4, h5, h6, div, p, span, li, label, b, strong, i, em, br, .required {
+
+    &::selection {
+        color: #ffffff;
+        background-color: mix($color-primary, #000000, 80);
+    }
+
+    &.marker::selection {
+        color: mix($color-primary, #000000, 40);
+    }
+    
+    &::-moz-selection {
+        color: #ffffff;
+        background-color: mix($color-primary, #000000, 80);
+    }
+    
+    &.marker::-moz-selection {
+        color: mix($color-primary, #000000, 40);
+    }
+    
+    &::-webkit-selection {
+        color: #ffffff;
+        background-color: mix($color-primary, #000000, 80);
+    }
+    
+    &.marker::-webkit-selection {
+        color: mix($color-primary, #000000, 40);
+    }
+}
+
+a::selection,
+mark::selection,
+bdi::selection,
+.woocommerce-Price-currencySymbol::selection {
+    color: mix($color-primary, #000000, 40);
+    background-color: mix($color-primary, #000000, 80);
+}
+
+a::-moz-selection,
+mark::-moz-selection,
+bdi::-moz-selection,
+.woocommerce-Price-currencySymbol::-moz-selection {
+    color: mix($color-primary, #000000, 40);
+    background-color: mix($color-primary, #000000, 80);
+}
+
+a::-webkit-selection,
+mark::-webkit-selection,
+bdi::-webkit-selection,
+.woocommerce-Price-currencySymbol::-webkit-selection {
+    color: mix($color-primary, #000000, 40);
+    background-color: mix($color-primary, #000000, 80);
+}
+
+
+
+@media (min-width: 850px) {
+    h1 {
+        font-size: 32px;
+        line-height: 38px;
+        margin: 38px 0;
+    }
+
+    h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 34px 0 16px;
+    }
+
+    h3 {
+        font-size: 22px;
+        line-height: 26px;
+        margin: 30px 0 16px;
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 24px 0 16px;
+    }
+
+    .site-content {
+        padding-bottom: 110px;
+    }
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

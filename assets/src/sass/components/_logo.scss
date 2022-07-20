@@ -1,0 +1,21 @@
+// Logotype
+
+.custom-logo-link:focus {
+    outline: 1px dotted $color-border;
+}
+
+.custom-logo {
+    display: block;
+    width: 110px;
+    height: auto;
+    max-height: 36px;
+}
+
+
+
+@media (min-width: 850px) {
+    .custom-logo {
+        width: 147px;
+        max-height: 48px;
+    }
+}

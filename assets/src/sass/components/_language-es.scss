@@ -1,0 +1,32 @@
+// WPML language Es
+
+.page-language-es {
+
+
+    
+    ul.products li.product .button:after {
+        right: calc(50% - 52px);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .page-language-es {
+        
+        .slider-single__link {
+            font-size: 18px;
+        }
+
+        // .variations-table-row {
+
+        //     .btn-tilted--buy {
+        //         padding-right: 80px;
+        //     }
+    
+        //     .variations_button .btn-tilted__text {
+        //         font-size: 16px;
+        //         line-height: 24px;
+        //     } 
+        // }
+    }
+}

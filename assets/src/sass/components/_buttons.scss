@@ -1,0 +1,669 @@
+// Button styles
+
+// Button - background blue
+.button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-background;
+    background-color: $color-primary;
+    border: none;
+    margin-left: 3px;
+    padding: 10px 27px;
+    transform: skew(-13deg);
+    transform-style: preserve-3d;
+    transition: background-color 0.25s ease;
+    cursor: pointer;
+
+    &:visited {
+        color: $color-background;
+    }
+
+    &:focus,
+    &:hover {
+        color: $color-background;
+        background-color: mix($color-primary, #000000, 80);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// Button - background transparent
+.btn {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-background;
+    background-color: transparent;
+    border: 1px solid $color-background;
+    margin-left: 4px;
+    padding: 8px 25px;
+    transform-style: preserve-3d;
+    transform: skew(-13deg);
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        transform: translateX(0) skew(13deg);
+        transition: transform 0.2s ease;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        width: 14px;
+        height: 14px;
+        transform: translate(0, -50%) skew(13deg);
+        transition: transform 0.4s ease;
+    }
+
+    &:visited {
+        color: $color-background;
+    }
+
+    &:focus,
+    &:hover {
+
+        span {
+            transform: translateX(-2px) skew(13deg);
+        }
+
+        svg {
+            transform: translate(2px, -50%) skew(13deg);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn--arrow {
+    padding-right: 45px;
+}
+
+.btn--big {
+    padding: 15px 55px;
+
+    &.btn--arrow {
+        padding-right: 80px;
+
+        svg {
+            right: 57px;
+        }
+    }
+}
+
+.btn--outline {
+    color: $color-primary;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
+    margin-left: 6px;
+
+    .btn--arrow {
+
+    }
+}
+
+
+.btn-close {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 7px;
+    cursor: pointer;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+        transform: translate(-50%,-50%);
+        transition: transform .25s ease-in-out;
+    }
+
+    path {
+        fill: $color-text;
+    }
+
+    &:focus path,
+    &:hover path {
+        fill: $color-primary;
+    }
+}
+
+
+
+.btn-tilted {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 262px;
+    font-size: 14px;
+    font-family: $ff-base;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-text;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    margin: 0 6px 8px 16px;
+    padding: 17px 30px;
+    transform: none;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+    &:visited {
+        color: $color-text;
+    }
+}
+
+.btn-tilted--arrow {
+    text-align: left;
+    padding-right: 60px;
+}
+
+.btn-tilted--buy {
+    text-align: left;
+    padding-right: 60px;
+}
+
+.btn-tilted__bg,
+.btn-tilted__border {
+    display: block;
+    position: absolute;
+    transform: skew(-13deg);
+}
+  
+.btn-tilted__bg {
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background-image: linear-gradient(90deg, 
+                                      $color-primary-light, 
+                                      $color-primary-adjust
+                                      );
+    box-shadow: inset 0 -10px 1px -1px rgba(0, 0, 0, 0.1);
+}
+  
+.btn-tilted__border {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #ffffff, #3d3d3d);
+}
+  
+.btn-tilted__text {
+    position: relative;
+    display: inline-block;
+    color: $color-text;
+    z-index: 99;
+}
+
+.btn-tilted__border-back {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -9px;
+    width: calc(100% - 5px);
+    height: 100%;
+    border: 3px solid $color-primary-adjust;
+    transform: skew(-13deg);
+    transition: border-color 0.3s ease;
+    z-index: -1;
+}
+
+.btn-tilted {
+
+    svg {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        fill: $color-text;
+        transition: fill 0.3s ease;
+        z-index: 99;
+    }
+    
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        // top: calc(50% + 15px);
+        bottom: 10px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        font-size: 1px;
+        border-top: 1px dotted $color-text;
+        transform: translateY(-50%);
+        transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    .btn-tilted__bg:after,
+    .btn-tilted__border:after {
+        content: "";
+        position: absolute;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        z-index: 99;
+    }
+
+    .btn-tilted__bg:after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg, 
+                                          $color-primary-adjust,
+                                          $color-primary-light
+                                          );
+        box-shadow: inset 0 -12px 1px -2px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-tilted__border:after {
+        top: 0;
+        left: -1px;
+        width: calc(100% + 1px);
+        height: 100%;
+        background-image: linear-gradient(90deg, #3d3d3d, #ffffff);
+    }
+
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        outline: none;
+
+        &:after {
+            width: 39%;
+            opacity: 1;
+        }
+
+        svg {
+            fill: $color-primary-light;
+        }
+
+        .btn-tilted__bg:after,
+        .btn-tilted__border:after {
+            opacity: 0;
+        }
+
+        .btn-tilted__border-back {
+            border-color: $color-primary-light;
+        }
+    }
+}
+
+
+
+
+
+.submit-tilted {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-text;
+    box-sizing: border-box;
+    margin: 0 6px 8px 16px;
+    padding: 0;
+    transform-style: preserve-3d;
+
+    br {
+        display: none;
+    }
+}
+
+.submit-tilted--arrow {
+    text-align: left;
+    padding-right: 60px;
+}
+
+.submit-tilted__bg,
+.submit-tilted__border {
+    display: block;
+    position: absolute;
+    transform: skew(-13deg);
+}
+  
+.submit-tilted__bg {
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background-image: linear-gradient(90deg, 
+                                      $color-primary-light, 
+                                      $color-primary-adjust
+                                      );
+    box-shadow: inset 0 -10px 1px -1px rgba(0, 0, 0, 0.1);
+}
+  
+.submit-tilted__border {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #ffffff, #3d3d3d);
+}
+  
+.submit-tilted input[type="submit"] {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 262px;
+    font-size: 14px;
+    font-family: $ff-base;
+    line-height: 18px;
+    text-align: center;
+    color: $color-text;
+    border: none;
+    padding: 17px 30px;
+    z-index: 99;
+    
+    &:visited {
+        color: $color-text;
+    }
+
+    &:focus,
+    &:hover {
+        color: $color-text;
+        background-color: transparent;
+    }
+}
+
+.submit-tilted__border-back {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -9px;
+    width: calc(100% - 5px);
+    height: 100%;
+    border: 3px solid $color-primary-adjust;
+    transform: skew(-13deg);
+    transition: border-color 0.3s ease;
+    z-index: -1;
+}
+
+.submit-tilted {
+
+    svg {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        fill: #ffffff;
+        transition: fill 0.3s ease;
+        z-index: 99;
+    }
+    
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        // top: calc(50% + 15px);
+        bottom: 10px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        font-size: 1px;
+        border-top: 1px dotted #ffffff;
+        transform: translateY(-50%);
+        transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    .submit-tilted__bg:after,
+    .submit-tilted__border:after {
+        content: "";
+        position: absolute;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        z-index: 99;
+    }
+
+    .submit-tilted__bg:after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg, 
+                                          $color-primary-adjust,
+                                          $color-primary-light
+                                          );
+        box-shadow: inset 0 -12px 1px -2px rgba(0, 0, 0, 0.12);
+    }
+
+    .submit-tilted__border:after {
+        top: 0;
+        left: -1px;
+        width: calc(100% + 1px);
+        height: 100%;
+        background-image: linear-gradient(90deg, #3d3d3d, #ffffff);
+    }
+
+    &.focus,
+    &:hover {
+
+        &:after {
+            width: 39%;
+            opacity: 1;
+        }
+
+        svg {
+            fill: $color-primary-light;
+        }
+
+        .submit-tilted__bg:after,
+        .submit-tilted__border:after {
+            opacity: 0;
+        }
+
+        .submit-tilted__border-back {
+            border-color: $color-primary-light;
+        }
+    }
+}
+
+
+
+
+
+.link-arrow {
+    position: relative;
+    padding-right: 20px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 15px;
+        height: 18px;
+        background-image: url("../img/icon-arrow-right-marker.svg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+        transition: opacity 0.2s ease;
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus:after,
+    &:hover:after {
+        opacity: 0.8;
+    }
+}
+
+
+
+
+.btn-top {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,.1);
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: background-color .3s ease-out, opacity 1s;
+    opacity: 0;
+    z-index: 9998;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: calc(50% + 2px);
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border: 1px solid $color-primary;
+        border-width: 2px 2px 0 0;
+        padding: 4px;
+        transform: translate(-50%,-50%) rotate(-45deg);
+        opacity: 1;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+
+        &:before {
+            border-color: $color-text;
+        }
+    }
+}
+
+
+
+@media (min-width: 850px) {
+    .btn-top--show {
+        display: block;
+        animation: smoothAppearance .6s forwards;
+    }
+
+    .btn-top--hide {
+        animation: smoothAppearanceHide .5s forwards;
+    }
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+    .btn {
+        font-size: 20px;
+        line-height: 26px;
+        
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    
+    .btn--arrow {
+        padding-right: 55px;
+
+        &.btn--big {
+            padding-right: 85px;
+        }
+    }
+
+    .btn-tilted {
+        min-width: 300px;
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 8px 10px 20px;
+        padding: 20px 30px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:after {
+            bottom: 14px;
+        }
+    }
+
+    .btn-tilted--arrow {
+        padding-right: 120px;
+    }
+
+    .btn-tilted--buy {
+        min-width: 315px;
+        padding-right: 120px;
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    
+    .btn-tilted__border-back {
+        bottom: -9px;
+        left: -11px;
+    }
+
+
+
+
+
+    .submit-tilted {
+
+        input[type="submit"] {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &:after {
+            bottom: 14px;
+        }
+    }
+
+
+
+
+
+    .link-arrow {
+        font-size: 25px;
+        line-height: 32px;
+        padding-right: 25px;
+
+        &:after {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

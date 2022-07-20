@@ -1,0 +1,128 @@
+// WPML language icons
+
+.wpml-lang {
+    position: relative;
+
+    &:focus,
+    &:hover {
+
+        .wpml-lang__list {
+            visibility: visible;
+        }
+    }
+}
+
+.wpml-lang__link {
+    display: block;
+    padding: 6px 10px;
+}
+
+.wpml-lang__flag {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wpml-lang__native {
+    display: none;
+}
+
+.wpml-lang__list {
+    visibility: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 101;
+}
+
+.wpml-lang__item {
+    border-top: 1px solid #888;
+
+    .wpml-lang__link {
+        background-color: mix($color-background, #ffffff, 92);
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        &:focus,
+        &:hover {
+            background-color: mix($color-background, #ffffff, 75);
+        }
+    }
+    
+    .wpml-lang__flag {
+    
+    }
+    
+    .wpml-lang__native {
+    
+    }
+}
+
+
+
+@media (min-width: 850px) {
+    .wpml-lang__link {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+
+
+@media (min-width: 1080px) {
+    .wpml-lang > .wpml-lang__link {
+        position: relative;
+        padding-right: 20px;
+    
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 2px;
+            width: 10px;
+            height: 10px;
+            background-image: url('../img/icon-arrow.svg');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: translateY(-50%) rotate(0);
+            transition: transform 0.2s ease-out;
+        }
+    }
+
+    .wpml-lang:focus .wpml-lang__link:after,
+    .wpml-lang:hover .wpml-lang__link:after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .wpml-lang__list {
+        width: 100%;
+    }
+
+    .wpml-lang__link {
+        text-decoration: none;
+        color: $color-text;
+
+        &:focus,
+        &:hover {
+            color: $color-text;
+        }
+    }
+
+    .wpml-lang__item .wpml-lang__link {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .wpml-lang__flag {
+        display: inline-block;
+    }
+
+    .wpml-lang__native {
+        display: inline-block;
+        margin-left: 2px;
+    }
+}

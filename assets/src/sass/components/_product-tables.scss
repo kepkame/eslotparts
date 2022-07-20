@@ -1,0 +1,279 @@
+// Product tables (quanity, price, button Add to cart)
+
+.woocommerce-variations-table {
+
+    thead {
+        @extend .visually-hidden;
+    }
+
+    .variations-table-row {
+        background-color: transparent;
+    }
+}
+
+table.dataTable tbody tr {
+    background-color: transparent;
+}
+
+table.dataTable > tbody > tr.child span.dtr-title {
+    display: none;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+    padding: 0;
+}
+
+.variations-table-row {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .variations-table-value-pr {
+        display: block;
+        font-size: 24px;
+        line-height: 24px;
+        color: $color-primary;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .woocommerce-Price-amount {
+
+    }
+
+    .cart {
+
+    }
+
+    .variations-table-value-qt {
+        display: block;
+        white-space: nowrap;
+        vertical-align: top;
+        margin-bottom: 15px;
+    }
+
+    .quantity {
+        display: inline-block;
+
+        input {
+            font-size: 24px;
+            line-height: 24px;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .input-text.qty {
+            width: 40px;
+            text-align: center;
+            appearance: textfield;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+            }
+        }
+    }
+
+    .variations-table-value-qt .minus,
+    .variations-table-value-qt .plus {
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: $color-text;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        padding-right: 10px;
+        padding-left: 10px;
+        transform: none;
+        transform-style: flat;
+        cursor: pointer;
+        
+        &:focus,
+        &:hover {
+            color: $color-primary;
+            background-color: transparent;
+        }
+    }
+
+    .variations_button {
+
+        button.button {
+            margin-bottom: 8px;
+
+            &[disabled="disabled"] {
+                display: none;
+            }
+        }
+
+        .btn-tilted__text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+.variations-table-value-ca .woocommerce-variation-add-to-cart {
+
+    .btn-tilted.loading:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #fff;
+        border-radius: 32px;
+        border-right-color: transparent !important;
+        border-top-color: transparent !important;
+        margin-top: -8px;
+        margin-left: -8px;
+        animation: spin 500ms infinite linear;
+        z-index: 1;
+    }
+
+    .btn-tilted.loading .btn-tilted__text {
+        opacity: 0.4;
+    }
+
+    .btn-tilted.added {
+        display: block;
+        color: $color-success;
+        min-width: auto;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0;
+        cursor: default;
+    
+        &:after {
+            content: none;
+        }
+    }
+
+    .woocommerce-variation-add-to-cart-out-of-stock {
+        font-size: inherit;
+        line-height: inherit;
+        color: $color-text-dark;
+    }
+}
+
+
+
+@media (min-width: 550px) {
+    .variations-table-row {
+        text-align: left;
+
+        .variations-table-value-pr,
+        .variations-table-value-ca,
+        .variations-table-value-qt {
+            display: inline-block;
+            width: auto;
+        }
+
+        .variations-table-value-pr {
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .variations-table-value-qt {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    .variations-table-value-ca .woocommerce-variation-add-to-cart {
+
+        .btn-tilted.added {
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+
+        .added_to_cart {
+            display: inline-block;
+            margin-left: 30px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+
+@media (min-width: 850px) {
+    .variations-table-row {
+
+        .variations-table-value-pr {
+            display: block;
+        }
+
+        .variations-table-value-ca {
+
+            .btn-tilted {
+                // min-width: 180px;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .variations-table-row {
+
+        .variations-table-value-pr {
+            font-size: 34px;
+            line-height: 34px;
+        }
+
+        .variations-table-value-qt {
+            margin-top: 8px;
+
+            input,
+            .minus,
+            .plus {
+                font-size: 34px;
+                line-height: 34px;
+            }
+        }
+
+        .variations_button .btn-tilted__text {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    .variations-table-value-ca .woocommerce-variation-add-to-cart {
+
+        .btn-tilted.added {
+            font-size: 20px;
+            margin-top: 9px;
+            margin-bottom: 0;
+        }
+
+        .btn-tilted.loading:before {
+            width: 28px;
+            height: 28px;
+            margin-top: -14px;
+            margin-left: 0;
+        }
+
+        .added_to_cart {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+
+
+@media (min-width: 1250px) {
+    .variations-table-row .variations-table-value-pr {
+        display: inline-block;
+    }
+}

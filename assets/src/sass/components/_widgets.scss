@@ -1,0 +1,70 @@
+// Widgets
+
+.widget-area {
+    
+}
+
+.widget-title {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.widget ul {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 45px;
+    padding: 0;
+
+    li + li {
+        margin-top: 14px;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        line-height: 20px;
+        color: $color-text;
+        padding-left: 0;
+        transition: padding-left 0.3s ease-out;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+
+        &:focus,
+        &:hover {
+            color: $color-primary;
+            padding-left: 12px;
+
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 950px) {
+    .widget ul {
+        margin-bottom: 45px;
+    }
+}

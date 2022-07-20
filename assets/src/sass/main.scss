@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@import 'abstracts/variables'; // Sass variables
+@import 'abstracts/functions'; // Sass functions
+@import 'abstracts/mixins'; // Sass mixins
+@import 'abstracts/placeholders'; // Sass placeholders
+
+// General project template
+@import 'base/normalize'; // Reset/normalize
+@import 'base/typography'; // Typography
+@import 'base/animations'; // Animation
+@import 'base/base'; // Other global styles (h1, ul, visually-hidden, etc.)
+@import 'base/nojs'; // Styles with JS not working
+
+// Small components
+@import 'components/breadcrumbs'; // Breadcrumbs
+@import 'components/buttons'; // Buttons
+@import 'components/burger-menu'; // Burger menu
+@import 'components/carousel'; // Carousel
+@import 'components/cover'; // Cover
+@import 'components/cookies'; // Cookies – Plugin «GDPR Cookie Consent»
+@import 'components/dropdown'; // Dropdown
+@import 'components/features'; // Features
+@import 'components/forms'; // Forms
+@import 'components/fancybox'; // Fancybox
+@import 'components/frames'; // Frames
+@import 'components/language-es'; // WPML language ES
+@import 'components/language-ru'; // WPML language RU
+@import 'components/logo'; // Logotype
+@import 'components/list-of-contacts'; // List of contacts
+@import 'components/mini-account'; // WooCommerce navigations account
+@import 'components/mini-cart'; // WooCommerce mini-cart
+@import 'components/navigations'; // Navigations
+@import 'components/pagination'; // Pagination
+@import 'components/product-tables'; // Product tables
+@import 'components/popups'; // Popups
+@import 'components/search'; // Search products
+@import 'components/slick'; // Slick Slider
+@import 'components/slick-theme'; // Slick Slider
+@import 'components/video'; // Block video
+@import 'components/widgets'; // Widgets WordPress and WooCommerce
+@import 'components/wpml'; // // WPML – Plugin translate
+@import 'components/wpml-lang'; // // WPML – Plugin translate
+
+// Styles involved in creating a site layout
+@import 'layout/header'; // Header site
+@import 'layout/footer'; // Footer site
+@import 'layout/comments'; // Comments
+@import 'layout/mfp-menu'; // mfp-menu
+
+// Page styles
+@import 'pages/home'; // Specific styles page Home
+@import 'pages/account'; // Specific styles page Account WooCommerce
+@import 'pages/cart'; // Specific styles page Cart WooCommerces
+@import 'pages/catalog'; // Specific styles page Catalog WooCommerce
+@import 'pages/checkout'; // Specific styles page Checkout WooCommerce
+@import 'pages/checkout'; // Specific styles page Order WooCommerce
+@import 'pages/contacts'; // Specific styles page Return
+@import 'pages/order'; // Specific styles page Order WooCommerce
+@import 'pages/product'; // Specific styles page Product WooCommerce
+@import 'pages/return'; // Specific styles page Return
+@import 'pages/404'; // Specific styles page 404-error
+
+// Themes of website template design.
+@import 'themes/admin'; // Admin theme
+@import 'themes/theme'; // Default theme

@@ -1,0 +1,17 @@
+// SASS variables
+
+$color-primary: #24c7fb;
+$color-primary-light: mix($color-primary, #ffffff, 70);
+$color-primary-adjust: mix(adjust-hue($color-primary, 72), #000000, 35);
+$color-secondary: #ef403b;
+
+$color-background: #1a1a1a;
+$color-border: #888888;
+$color-border-dark: #505050;
+$color-error: #f44660; //#ff5651;
+$color-notice: #e6a42c;
+$color-success: #23b59a;
+$color-text: #f5f5f5;
+$color-text-dark: #999999;
+
+$ff-base: 'Poppins', 'Roboto', Arial, sans-serif;

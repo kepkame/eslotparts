@@ -1,0 +1,57 @@
+// WooCommerce navigations account
+
+.mini-account {
+    position: relative;
+}
+
+.header-controls__woocommerce-nav {
+    display: none;
+    list-style: none;
+    position: absolute;
+    right: -10px;
+    width: 260px;
+    background-color: #2e2e2e;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 20px;
+    z-index: 998;
+
+    .woocommerce-MyAccount-navigation-link {
+        display: block;
+        margin: 0;
+        vertical-align: top;
+
+        a {
+            display: inline-block;
+            width: auto;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration: none;
+            color: $color-text;
+            padding: 6px 0;
+
+            &:focus,
+            &:hover {
+                color: $color-primary;
+                text-decoration: none;
+            }
+        }
+
+        &:nth-child(n + 2) {
+            border-top: 1px solid $color-border;
+        }
+    }
+}
+
+.header-controls__woocommerce-nav--open {
+    display: block;
+}
+
+
+
+@media (min-width: 1400px) {
+    .header-controls__woocommerce-nav {
+        right: -72px;
+    }
+}

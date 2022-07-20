@@ -1,0 +1,66 @@
+// WPML language RU
+
+.page-language-ru {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .header-contacts__item span {
+        font-weight: 500;
+    }
+
+    ul.products li.product .button:after {
+        top: calc(50% - 2px);
+        right: calc(50% - 45px);
+    }
+
+
+}
+
+
+
+@media (min-width: 850px) {
+
+}
+
+
+
+@media (min-width: 1024px) {
+    .page-language-ru {
+        
+        .slider-single__link {
+            font-size: 18px;
+        }
+
+        .variations-table-row {
+
+            .btn-tilted--buy {
+                padding-right: 80px;
+            }
+    
+            .variations_button .btn-tilted__text {
+                font-size: 16px;
+                line-height: 24px;
+            } 
+        }
+    }
+}
+
+
+
+@media (min-width: 1360px) {
+    .page-language-ru {
+        
+        .slider-single__link {
+            font-size: 22px;
+        }
+
+        .variations-table-row .variations_button .btn-tilted__text {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}

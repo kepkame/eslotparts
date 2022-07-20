@@ -1,0 +1,142 @@
+// Search products
+
+.product-search {
+    position: relative;
+}
+
+.product-search__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+
+    path {
+        fill: $color-border;
+    }
+}
+
+.product-search__input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 14px;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    padding: 8px 15px;
+    padding-left: 40px;
+}
+
+.product-search__preloader {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Background on mobile
+.dgwt-wcas-overlay-mobile {
+    background-color: $color-background;
+}
+
+// Button loupe
+.dgwt-wcas-no-submit .dgwt-wcas-ico-magnifier {
+    height: 46%;
+}
+
+// Button retrun on mobile
+.dgwt-wcas-om-bar button.dgwt-wcas-om-return {
+    background-color: #5d5d5d;
+    transition: background-color 0.2s ease;
+
+    path {
+        fill: $color-primary;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: mix(#5d5d5d, $color-text, 85);
+    }
+}
+
+// Product image
+.dgwt-wcas-si img {
+    border-color: $color-border;
+    padding: 0;
+}
+
+// Price color
+.dgwt-wcas-content-wrapp .dgwt-wcas-sp {
+
+    .woocommerce-Price-amount bdi {
+        color: $color-primary;
+
+        .woocommerce-Price-currencySymbol {
+            color: inherit;
+        }
+    }
+
+    del {
+        opacity: 1;
+
+        &,
+        .woocommerce-Price-amount bdi {
+            color: $color-text-dark;
+        }
+    }
+    
+    ins {
+        background-color: transparent;
+    }
+}
+
+.dgwt-wcas-st>span {
+    display: block;
+}
+
+.dgwt-wcas-si img {
+    background-color: $color-text;
+}
+
+.dgwt-wcas-sp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    
+    .amount {
+        margin-left: 5px;
+    }
+}
+
+
+.dgwt-wcas-has-headings .dgwt-wcas-suggestion.dgwt-wcas-suggestion-tax.dgwt-wcas-suggestion-selected,
+.dgwt-wcas-has-headings .dgwt-wcas-suggestion.dgwt-wcas-suggestion-tax:hover,
+.dgwt-wcas-suggestions-wrapp .dgwt-wcas-suggestion,
+.dgwt-wcas-suggestions-wrapp .dgwt-wcas-suggestion.dgwt-wcas-suggestion-product,
+.dgwt-wcas-suggestions-wrapp .dgwt-wcas-suggestion.dgwt-wcas-suggestion-nores {
+    text-decoration: none;
+}
+
+.dgwt-wcas-suggestions-wrapp.woocommerce.dgwt-wcas-has-sku.dgwt-wcas-has-headings.js-dgwt-wcas-initialized .dgwt-wcas-suggestion-cat.dgwt-wcas-suggestion-selected {
+    color: $color-text;
+    text-decoration: underline;
+}
+

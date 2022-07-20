@@ -1,0 +1,124 @@
+// Page Contacts up
+
+.page-contact {
+
+}
+
+.page-contacts__col {
+    margin-bottom: 30px;
+}
+
+.page-contact__col--text {
+
+}
+
+.b-contacts {
+
+}
+
+.b-contacts__row {
+    margin-bottom: 15px;
+
+    span {
+        display: block;
+    }
+}
+
+.b-contacts__row--company {
+
+}
+
+.b-contacts__row--address {
+
+    h5 {
+        text-transform: none;
+        margin-bottom: 5px;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.b-contacts__row--contacts {
+
+    span {
+        display: inline;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.page-contacts__col--map {
+
+    h4 {
+        text-transform: none;
+    }
+}
+
+.page-contacts__map {
+    background-color: $color-background;
+}
+
+
+
+
+
+
+
+@media (min-width: 850px) {
+    .page-contacts {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .page-contacts__col--text {
+        flex-basis: 30%;
+        max-width: 30%;
+    }
+    
+    .page-contacts__col--map {
+        flex-basis: 67%;
+        max-width: 67%;
+        margin-left: auto;
+
+        h4 {
+            margin-top: 0;
+        }
+    }
+
+    .page-contacts__col--form {
+        flex-basis: 100%;
+        max-width: 100%;
+        
+        .wpcf7__row--inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+    
+            .wpcf7__item {
+                flex-basis: 32%;
+                max-width: 32%;
+                margin-right: 2%;
+                margin-bottom: 20px;
+    
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+}

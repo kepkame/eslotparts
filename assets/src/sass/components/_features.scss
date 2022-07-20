@@ -1,0 +1,154 @@
+// Features
+
+.features {
+
+}
+
+.features__item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.features__icon {
+    display: inline-block;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+            fill: $color-primary;
+        }
+    }
+}
+
+.features__text {
+
+}
+
+.features__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.features__desc {
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-text-dark;
+    margin: 0;
+
+    a {
+        font-size: inherit;
+        line-height: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+            outline: none;
+        }
+    }
+}
+
+
+.cart-features {
+    border-top: 1px solid $color-border-dark;
+    margin-top: 60px;
+    padding: 0;
+    padding-top: 30px;
+
+    .woocommerce-product-details__features {
+        margin-bottom: 0;
+    }
+}
+
+
+
+@media (min-width: 600px) {
+    .cart-features {
+
+        .features {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .features__item {
+            flex-basis: 48%;
+            max-width: 48%;
+
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 850px) {
+    .features__icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .features__title,
+    .features__desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .features__title {
+        margin-top: 7px;
+    }
+
+    .cart-features {
+        margin-top: 110px;
+    
+        .woocommerce-product-details__features {
+            padding-left: 0;
+        }
+
+        .features__icon {
+            width: 30px;
+            height: 40px;
+        }
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .woocommerce-product-details__features .features__item {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .cart-features .features__item {
+        flex-basis: 24%;
+        max-width: 24%;
+        margin-bottom: 0;
+    }
+}
